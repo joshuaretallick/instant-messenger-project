@@ -653,3 +653,291 @@ Started GET "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-i
   
 ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
   
+Started GET "/channels" for ::1 at 2021-02-16 20:13:21 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 89.9ms | Allocations: 3978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 107.9ms | Allocations: 10519)
+Completed 200 OK in 160ms (Views: 125.6ms | ActiveRecord: 3.2ms | Allocations: 21727)
+
+
+Started GET "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/uploads/channel/picture/1/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/1/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/channels/1" for ::1 at 2021-02-16 20:13:24 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4941)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 7959)
+
+
+Started GET "/uploads/channel/picture/1/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/1/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:24 +0000
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started DELETE "/channels/1" for ::1 at 2021-02-16 20:13:28 +0000
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mChannel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 15ms (ActiveRecord: 2.2ms | Allocations: 4003)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:13:28 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5215)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.8ms | Allocations: 6708)
+
+
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/channels/2" for ::1 at 2021-02-16 20:13:29 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4533)
+Completed 200 OK in 28ms (Views: 20.8ms | ActiveRecord: 0.3ms | Allocations: 6575)
+
+
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/2/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started DELETE "/channels/2" for ::1 at 2021-02-16 20:13:32 +0000
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mChannel Destroy (0.8ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms | Allocations: 3852)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:13:32 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5052)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 6544)
+
+
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started GET "/channels/3" for ::1 at 2021-02-16 20:13:33 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4533)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 6590)
+
+
+Started GET "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg" for ::1 at 2021-02-16 20:13:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/channel/picture/3/thumb_dog-puppy-on-garden-royalty-free-image-1586966191.jpg"):
+  
+Started DELETE "/channels/3" for ::1 at 2021-02-16 20:13:36 +0000
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mChannel Destroy (0.5ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 16ms (ActiveRecord: 3.0ms | Allocations: 3876)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:13:36 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 4880)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 6370)
+
+
+Started GET "/channels/new" for ::1 at 2021-02-16 20:13:38 +0000
+Processing by ChannelsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/new.html.erb within layouts/application
+  Rendered channels/_form.html.erb (Duration: 70.0ms | Allocations: 3913)
+  Rendered channels/new.html.erb within layouts/application (Duration: 82.7ms | Allocations: 4257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.8ms | Allocations: 8447)
+Completed 200 OK in 102ms (Views: 93.4ms | ActiveRecord: 0.2ms | Allocations: 10066)
+
+
+Started POST "/channels" for ::1 at 2021-02-16 20:13:48 +0000
+Processing by ChannelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "channel"=>{"name"=>"Heavy Metal Truants", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fd7c281fbe0 @tempfile=#<Tempfile:/var/folders/nx/dnxsgtnd7vn49lsxbr_cns4w0000gn/T/RackMultipart20210216-657-3sk774.jpg>, @original_filename="1511194376-cavachon-puppy-christmas.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"channel[picture]\"; filename=\"1511194376-cavachon-puppy-christmas.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Channel"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mChannel Create (0.4ms)[0m  [1m[32mINSERT INTO "channels" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heavy Metal Truants"], ["picture", "1511194376-cavachon-puppy-christmas.jpg"], ["created_at", "2021-02-16 20:13:48.887714"], ["updated_at", "2021-02-16 20:13:48.887714"]]
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/channels/4
+Completed 302 Found in 487ms (ActiveRecord: 1.4ms | Allocations: 6337)
+
+
+Started GET "/channels/4" for ::1 at 2021-02-16 20:13:48 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 4434)
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 0.4ms | Allocations: 6458)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:13:51 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5154)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 6669)
+
+
+Started GET "/" for ::1 at 2021-02-16 20:17:43 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-16 20:17:43 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (12.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 3664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.1ms | Allocations: 18794)
+Completed 200 OK in 163ms (Views: 107.7ms | ActiveRecord: 14.1ms | Allocations: 30003)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:17:43 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 5032)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.4ms | Allocations: 6526)
+
+
+Started GET "/channels/4" for ::1 at 2021-02-16 20:17:57 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4711)
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 7515)
+
+
