@@ -21,3 +21,53 @@ Migrating to CreateChannels (20210216191152)
   [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-02-16 19:15:06 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/JoshOldEmpire/.rvm/gems/ruby-2.7.0/gems/railties-6.1.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/JoshOldEmpire/.rvm/gems/ruby-2.7.0/gems/railties-6.1.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.5ms | Allocations: 334)
+Completed 200 OK in 93ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 2470)
+
+
+Started GET "/" for ::1 at 2021-02-16 19:18:41 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/JoshOldEmpire/.rvm/gems/ruby-2.7.0/gems/railties-6.1.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/JoshOldEmpire/.rvm/gems/ruby-2.7.0/gems/railties-6.1.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.2ms | Allocations: 334)
+Completed 200 OK in 57ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 2489)
+
+
+Started GET "/channel" for ::1 at 2021-02-16 19:18:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/channel"):
+  
+Started GET "/channels" for ::1 at 2021-02-16 19:18:57 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:15
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1072)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/JoshOldEmpire/Desktop/rails/instant-messenger/public/packs
+[Webpacker] Hash: ce14c115e350524bb5a9
+Version: webpack 4.46.0
+Time: 3145ms
+Built at: 16/02/2021 19:19:04
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b43fa54005da8e229d8c.js    125 KiB  application  [emitted] [immutable]  application
+js/application-b43fa54005da8e229d8c.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b43fa54005da8e229d8c.js js/application-b43fa54005da8e229d8c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 7467.2ms | Allocations: 22022)
+Completed 200 OK in 7477ms (Views: 7469.6ms | ActiveRecord: 0.3ms | Allocations: 23566)
+
+
