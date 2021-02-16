@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @channel.name %>
-</p>
+<div class="row">
+  <div class="col-md-9">
+    <%= image_tag(@channel.picture_url, width: '100%') if @channel.picture.present? %>
+  </div>
 
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@channel.picture_url, width: 600) if @channel.picture.present? %>
-</p>
-
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+  <div class="col-md-3">
+    <p><b>Name: </b><%= @channel.name %></p>
+    <p>
+      <%= link_to 'Edit', edit_channel_path(@channel) %> |
+      <%= link_to 'Destroy', @channel, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', channels_path %>
+    </p>
+  </div>
+</div>
