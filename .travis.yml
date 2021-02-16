@@ -13,4 +13,4 @@ script:
   - bundle exec rails db:migrate
   - bundle exec rails db:environment:set RAILS_ENV=test 
   - bundle exec rails webpacker:compile
-  - bundle exec rspec
+  # - bundle exec rspec
