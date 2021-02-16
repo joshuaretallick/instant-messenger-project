@@ -242,3 +242,292 @@ Processing by ChannelsController#index as HTML
 Completed 200 OK in 152ms (Views: 134.4ms | ActiveRecord: 0.4ms | Allocations: 11281)
 
 
+Started GET "/" for ::1 at 2021-02-16 20:01:59 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-16 20:01:59 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | Allocations: 15977)
+Completed 200 OK in 146ms (Views: 132.6ms | ActiveRecord: 0.5ms | Allocations: 19642)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:01:59 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4766)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 5158)
+
+
+Started GET "/channels/new" for ::1 at 2021-02-16 20:02:08 +0000
+Processing by ChannelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/new.html.erb within layouts/application
+  Rendered channels/_form.html.erb (Duration: 14.1ms | Allocations: 2901)
+  Rendered channels/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 3280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 7355)
+Completed 200 OK in 32ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 11336)
+
+
+Started POST "/channels" for ::1 at 2021-02-16 20:02:33 +0000
+Processing by ChannelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "channel"=>{"name"=>"Heavy Metal Truants", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fbaae61b9d8 @tempfile=#<Tempfile:/var/folders/nx/dnxsgtnd7vn49lsxbr_cns4w0000gn/T/RackMultipart20210216-99204-m9hook.jpg>, @original_filename="dog-puppy-on-garden-royalty-free-image-1586966191.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"channel[picture]\"; filename=\"dog-puppy-on-garden-royalty-free-image-1586966191.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Channel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mChannel Create (1.3ms)[0m  [1m[32mINSERT INTO "channels" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heavy Metal Truants"], ["picture", "dog-puppy-on-garden-royalty-free-image-1586966191.jpg"], ["created_at", "2021-02-16 20:02:33.642962"], ["updated_at", "2021-02-16 20:02:33.642962"]]
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/channels/1
+Completed 302 Found in 18ms (ActiveRecord: 2.3ms | Allocations: 9126)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-16 20:02:33 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 441)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 4514)
+Completed 200 OK in 47ms (Views: 29.1ms | ActiveRecord: 0.3ms | Allocations: 5984)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:02:37 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5489)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 5884)
+
+
+Started GET "/channels/new" for ::1 at 2021-02-16 20:02:40 +0000
+Processing by ChannelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/new.html.erb within layouts/application
+  Rendered channels/_form.html.erb (Duration: 2.5ms | Allocations: 682)
+  Rendered channels/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4956)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 5404)
+
+
+Started POST "/channels" for ::1 at 2021-02-16 20:02:52 +0000
+Processing by ChannelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "channel"=>{"name"=>"Heavy Metal Truants II", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fbaae22ad10 @tempfile=#<Tempfile:/var/folders/nx/dnxsgtnd7vn49lsxbr_cns4w0000gn/T/RackMultipart20210216-99204-1erwyo3.jpg>, @original_filename="dog-puppy-on-garden-royalty-free-image-1586966191.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"channel[picture]\"; filename=\"dog-puppy-on-garden-royalty-free-image-1586966191.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Channel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mChannel Create (0.5ms)[0m  [1m[32mINSERT INTO "channels" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heavy Metal Truants II"], ["picture", "dog-puppy-on-garden-royalty-free-image-1586966191.jpg"], ["created_at", "2021-02-16 20:02:52.707573"], ["updated_at", "2021-02-16 20:02:52.707573"]]
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/channels/2
+Completed 302 Found in 40ms (ActiveRecord: 1.9ms | Allocations: 3427)
+
+
+Started GET "/channels/2" for ::1 at 2021-02-16 20:02:52 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 4294)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.1ms | Allocations: 5231)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:02:54 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5142)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 5550)
+
+
+Started GET "/channels/new" for ::1 at 2021-02-16 20:02:56 +0000
+Processing by ChannelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/new.html.erb within layouts/application
+  Rendered channels/_form.html.erb (Duration: 1.2ms | Allocations: 673)
+  Rendered channels/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5437)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 5844)
+
+
+Started POST "/channels" for ::1 at 2021-02-16 20:03:13 +0000
+Processing by ChannelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "channel"=>{"name"=>"Heavy Metal Truants III", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fbaaf81fc38 @tempfile=#<Tempfile:/var/folders/nx/dnxsgtnd7vn49lsxbr_cns4w0000gn/T/RackMultipart20210216-99204-101dicz.jpg>, @original_filename="dog-puppy-on-garden-royalty-free-image-1586966191.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"channel[picture]\"; filename=\"dog-puppy-on-garden-royalty-free-image-1586966191.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Channel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mChannel Create (0.4ms)[0m  [1m[32mINSERT INTO "channels" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heavy Metal Truants III"], ["picture", "dog-puppy-on-garden-royalty-free-image-1586966191.jpg"], ["created_at", "2021-02-16 20:03:13.687889"], ["updated_at", "2021-02-16 20:03:13.687889"]]
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/channels_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/channels/3
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 3404)
+
+
+Started GET "/channels/3" for ::1 at 2021-02-16 20:03:13 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 4292)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.2ms | Allocations: 5225)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:03:17 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5783)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 6179)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-16 20:03:42 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4404)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 5358)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-16 20:04:26 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 670)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 6862)
+Completed 200 OK in 64ms (Views: 38.1ms | ActiveRecord: 1.0ms | Allocations: 14436)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:04:30 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5540)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 6103)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-16 20:04:33 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 4660)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.8ms | Allocations: 5589)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:04:35 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 6745)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms | Allocations: 7151)
+
+
+Started GET "/channels/2" for ::1 at 2021-02-16 20:04:38 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4435)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 5844)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:04:39 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 7450)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.2ms | Allocations: 7939)
+
+
+Started GET "/channels/3" for ::1 at 2021-02-16 20:04:40 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:62:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4386)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 5348)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:04:42 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 7186)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.3ms | Allocations: 7616)
+
+
