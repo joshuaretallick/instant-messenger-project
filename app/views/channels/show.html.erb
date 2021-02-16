@@ -7,7 +7,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @channel.picture %>
+  <%= image_tag(@channel.picture_url, width: 600) if @channel.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
