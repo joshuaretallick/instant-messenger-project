@@ -941,3 +941,59 @@ Processing by ChannelsController#show as HTML
 Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 7515)
 
 
+Started GET "/" for ::1 at 2021-02-16 20:54:49 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-16 20:54:49 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 4552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 93.4ms | Allocations: 23776)
+Completed 200 OK in 247ms (Views: 100.5ms | ActiveRecord: 4.7ms | Allocations: 40259)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:54:50 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 919)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5473)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 7084)
+
+
+Started GET "/channels" for ::1 at 2021-02-16 20:54:52 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5451)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 7046)
+
+
+Started GET "/" for ::1 at 2021-02-16 20:54:53 +0000
+Started GET "/channels" for ::1 at 2021-02-16 20:54:53 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5453)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.3ms | Allocations: 7066)
+
+
