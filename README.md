@@ -9,8 +9,6 @@ This works better when the user signs up two different accounts on two different
 
 ![Screenshot 2021-02-17 at 17 45 12 (2)](https://user-images.githubusercontent.com/71830424/108245255-f6abc100-7147-11eb-8924-4157ce0f546e.png)
 
-https://medium.com/@jonathanmines/hiding-your-secrets-in-rails-5-using-credentials-e37174eede99
-
 # To Run
 - Clone Repo to your local machine
 - From Command Line enter directory and then run :
