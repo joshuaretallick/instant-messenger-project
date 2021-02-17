@@ -4,6 +4,11 @@ An messageboard style app where Users can create their own chat boards and then 
 
 Original outline at bottom of README documentation
 
+# API credentials
+Hidden, please use this article for info about access
+
+https://medium.com/@jonathanmines/hiding-your-secrets-in-rails-5-using-credentials-e37174eede99
+
 # To Run
 • Clone Repo to your local machine
 • From Command Line enter directory and then run :

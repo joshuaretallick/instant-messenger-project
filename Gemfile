@@ -7,6 +7,7 @@ ruby '3.0.0'
 gem 'rails', '~> 6.1.2', '>= 6.1.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'carrierwave'
+gem 'dotenv-rails'
 gem 'mini_magick'
 gem 'devise'
 gem 'pubnub'
