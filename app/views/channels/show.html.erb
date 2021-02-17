@@ -1,26 +1,53 @@
+<p id="notice"><%= notice %></p>
 
 
-<div class="row">
-  <div class="col-md-9">
-    <%= image_tag(@channel.picture_url, width: '25%') if @channel.picture.present? %>
-    <h3>Comments</h3>
-      <% @messages.each do |message| %>
-        <div>
-          <strong><%= message.user_name %></strong>
-          <br>
-          <p><%= message.body %></p>
-          <p><%= link_to 'Delete', message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        </div>
-      <% end %>
-      <%= render partial: 'messages/form', locals: { message: @message } %>
-  </div>
+<p>
+  <strong>Title:</strong>
+  <%= @channel.name %>
+</p>
 
-  <div class="col-md-3">
-    <p><b>Name: </b><%= @channel.name %></p>
-    <p>
-      <%= link_to 'Edit', edit_channel_path(@channel) %> |
-      <%= link_to 'Destroy', @channel, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', channels_path %>
-    </p>
-  </div>
-</div>
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
+
+<h2> Latest Comments </h2>
+<%# All the new (async) messages will appear here via the script below. When you refresh they will then appear in the Old Comments section  %>
+<div id="comments"></div>
+
+
+<h2>Old Comments</h2>
+<% @comments.each do |comment| %>
+  <p><%= comment.body %></p>
+<% end %>
+
+
+<script>
+    $(document).ready(function(){
+        console.log("REady");
+
+        var $pubnub = new PubNub({
+            publishKey : "pub-c-358f55e6-9c8e-4467-b79f-c647a10746a9",
+            subscribeKey :  "sub-c-023a0afe-6f72-11eb-889a-ee4206f2a398"
+        })
+
+        var article_id = "comments-" + window.location.pathname.split("/")[2];
+        console.log(article_id);
+        $pubnub.subscribe({
+            channels: [article_id]
+        });
+        $pubnub.addListener({
+            message: function(message) {
+                console.log(message);
+                console.log(message.message["comment"]);
+                $("#comments").append("<div class=\"comment\"><p>" + message.message["comment"] + "</p></div>")
+            }
+        })
+        $("#new_comment").bind("ajax:complete", function(event,xhr,status){
+            $('#comment_content').val('');
+        });
+        $('.actions input').keypress(function (e) {
+            if (e.which == 13) {
+                $('form#new_comment').submit();
+                return false;
+            }
+        });
+    });
+</script>

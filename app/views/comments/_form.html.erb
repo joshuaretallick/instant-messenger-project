@@ -1,10 +1,10 @@
-<%= form_with(model: message) do |form| %>
-  <% if message.errors.any? %>
+<%= form_with(model: comment) do |form| %>
+  <% if comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
       <ul>
-        <% message.errors.each do |error| %>
+        <% comment.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -12,16 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
-  </div>
-
-  <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
 
   <%= form.hidden_field :channel_id %>
+
 
   <div class="actions">
     <%= form.submit %>
