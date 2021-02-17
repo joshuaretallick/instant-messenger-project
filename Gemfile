@@ -12,6 +12,7 @@ gem 'pg'
 gem 'dotenv-rails'
 gem 'mini_magick'
 gem 'devise'
+gem 'sass-rails'
 gem 'pubnub'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
