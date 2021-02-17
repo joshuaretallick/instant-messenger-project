@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
       # end
 
       # Currently we are just redirectiing to comments#index
-      redirect_to comments_path, notice: "Comment was successfully created."
+      redirect_to @comment.channel, notice: "Comment was successfully created."
     else
       render :new
     end
