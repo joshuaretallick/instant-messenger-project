@@ -355,3 +355,28 @@ D, [2021-02-17T14:59:46.143665 #77070] DEBUG -- Pubnub::Telementry: Initialized 
 D, [2021-02-17T14:59:46.164388 #77070] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
 D, [2021-02-17T15:01:31.541892 #77160] DEBUG -- Pubnub::Telementry: Initialized Telemetry
 D, [2021-02-17T15:01:31.554289 #77160] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
+D, [2021-02-17T15:03:06.377574 #77260] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2021-02-17T15:03:06.377710 #77260] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
+D, [2021-02-17T15:03:21.271191 #73282] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2021-02-17T15:03:21.271460 #73282] DEBUG -- Pubnub::Telemetry: Current average: 0.17620515823364258
+D, [2021-02-17T15:03:21.271635 #73282] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2021-02-17T15:03:21.272539 #73282] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2021-02-17T15:03:21.272672 #73282] DEBUG -- Pubnub::Event: #send_request called
+D, [2021-02-17T15:03:21.272839 #73282] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2021-02-17T15:03:21.272917 #73282] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2021-02-17T15:03:21.273453 #73282] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2021-02-17T15:03:21.273925 #73282] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/pub-c-358f55e6-9c8e-4467-b79f-c647a10746a9/sub-c-023a0afe-6f72-11eb-889a-ee4206f2a398/0/comments-8/0/%7B%22comment%22%3A%22HotDOG%22%7D?l_pub=0.176&ortt=%7B%22t%22%3A16135742012716952%7D&pnsdk=PubNub-Ruby%2F4.5.0&seqn=6&uuid=4c4f9377-eb93-4baf-b283-d7019ddf2e90
+D, [2021-02-17T15:03:21.411215 #73282] DEBUG -- Pubnub::Event: Event#handle
+D, [2021-02-17T15:03:21.411690 #73282] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2021-02-17T15:05:02.201839 #77379] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2021-02-17T15:05:02.201975 #77379] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
+D, [2021-02-17T15:05:23.202385 #77379] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2021-02-17T15:05:23.384624 #77379] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2021-02-17T15:05:23.385189 #77379] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2021-02-17T15:05:23.385236 #77379] DEBUG -- Pubnub::Event: #send_request called
+D, [2021-02-17T15:05:23.385322 #77379] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2021-02-17T15:05:23.385363 #77379] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2021-02-17T15:05:23.386185 #77379] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2021-02-17T15:05:23.386491 #77379] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/pub-c-358f55e6-9c8e-4467-b79f-c647a10746a9/sub-c-023a0afe-6f72-11eb-889a-ee4206f2a398/0/comments-8/0/%7B%22comment%22%3A%22Testing%22%7D?ortt=%7B%22t%22%3A16135743233846898%7D&pnsdk=PubNub-Ruby%2F4.5.0&seqn=1&uuid=da13ece0-c2e1-494e-9435-ed65d938bc66
+D, [2021-02-17T15:05:23.549999 #77379] DEBUG -- Pubnub::Event: Event#handle
+D, [2021-02-17T15:05:23.550278 #77379] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish

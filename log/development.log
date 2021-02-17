@@ -8337,3 +8337,172 @@ Processing by ChannelsController#index as HTML
 Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.6ms | Allocations: 7225)
 
 
+Started GET "/" for ::1 at 2021-02-17 15:03:12 +0000
+Started GET "/channels" for ::1 at 2021-02-17 15:03:12 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/channels/index.html.erb:5
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 6427)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 1.1ms | Allocations: 6898)
+
+
+Started GET "/channels/8" for ::1 at 2021-02-17 15:03:14 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:64:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 3.6ms | Allocations: 403)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = ?[0m  [["channel_id", 8]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 6021)
+Completed 200 OK in 24ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 7826)
+
+
+Started POST "/comments" for ::1 at 2021-02-17 15:03:21 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>"HotDOG", "channel_id"=>"8"}, "commit"=>"Create Comment"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("channel_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["channel_id", 8], ["body", "HotDOG"], ["created_at", "2021-02-17 15:03:21.263186"], ["updated_at", "2021-02-17 15:03:21.263186"]]
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+Redirected to http://localhost:3000/channels/8
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms | Allocations: 3612)
+
+
+Started GET "/channels/8" for ::1 at 2021-02-17 15:03:21 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:64:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.7ms | Allocations: 403)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = ?[0m  [["channel_id", 8]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1396)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5885)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.3ms | Allocations: 7155)
+
+
+Started GET "/" for ::1 at 2021-02-17 15:05:08 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-17 15:05:08 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 17409)
+Completed 200 OK in 58ms (Views: 38.5ms | ActiveRecord: 1.4ms | Allocations: 24125)
+
+
+Started GET "/" for ::1 at 2021-02-17 15:05:12 +0000
+Started GET "/channels" for ::1 at 2021-02-17 15:05:12 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5694)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 6181)
+
+
+Started GET "/channels/8" for ::1 at 2021-02-17 15:05:16 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:64:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 24.1ms | Allocations: 2759)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = ?[0m  [["channel_id", 8]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 36.8ms | Allocations: 4411)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 8834)
+Completed 200 OK in 64ms (Views: 44.5ms | ActiveRecord: 1.1ms | Allocations: 17681)
+
+
+Started GET "/channels/8" for ::1 at 2021-02-17 15:05:18 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:64:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.9ms | Allocations: 403)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = ?[0m  [["channel_id", 8]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1948)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6593)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 7866)
+
+
+Started POST "/comments" for ::1 at 2021-02-17 15:05:22 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>"Testing", "channel_id"=>"8"}, "commit"=>"Create Comment"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("channel_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["channel_id", 8], ["body", "Testing"], ["created_at", "2021-02-17 15:05:22.959358"], ["updated_at", "2021-02-17 15:05:22.959358"]]
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (237.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:29:in `create'
+Redirected to http://localhost:3000/channels/8
+Completed 302 Found in 429ms (ActiveRecord: 238.0ms | Allocations: 8146)
+
+
+Started GET "/channels/8" for ::1 at 2021-02-17 15:05:23 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (0.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:64:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.7ms | Allocations: 403)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = ?[0m  [["channel_id", 8]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1413)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5905)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 7176)
+
+
