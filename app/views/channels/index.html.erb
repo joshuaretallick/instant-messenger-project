@@ -6,11 +6,9 @@
   <div class="row">
     <% group.compact.each do |channel| %>
       <div class="col-md-4">
-        <%= image_tag channel.picture_url(:thumb) if channel.picture.present? %>
-        <h4><%= link_to channel.name, channel %></h4>
+        <%= image_tag channel.picture_url, width: '50%' if channel.picture.present? %>
+        <h6><%= link_to channel.name, channel %></h6>
       </div>
     <% end %>
   </div>
 <% end %>
-
-<%= link_to 'New Channel', new_channel_path %>

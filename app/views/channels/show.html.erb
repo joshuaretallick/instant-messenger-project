@@ -8,14 +8,19 @@
 
 <%= render partial: 'comments/form', locals: { comment: @comment } %>
 
-<h4> Latest Comments </h3>
+<h4> Latest Comments </h4>
 <%# All the new (async) messages will appear here via the script below. When you refresh they will then appear in the Old Comments section  %>
 <div id="comments"></div>
 
 
-<h4>Old Comments</h3>
+<h4>Old Comments</h4>
 <% @comments.each do |comment| %>
+
   <p><%= comment.body %></p>
+
+
+
+
 <% end %>
 
 
