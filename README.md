@@ -1,6 +1,17 @@
 # Instant Messenger style app, tech test for Build Circle
 
+An messageboard style app where Users can create their own chat boards and then people can comment live via PubNub (aka no page refresh required)
+
 Original outline at bottom of README documentation
+
+# To Run
+• Clone Repo to your local machine
+• From Command Line enter directory and then run :
+- bundle install
+- yarn
+- rails db:migrate
+- rails s (this will start the server)
+• Then open localhost:3000 on your browser
 
 # Testing
 I built this app using Ruby-on-Rails.  Testing has been conducted with RSpec and Capybara, measured with SimpleCov, with an achieved coverage of -
