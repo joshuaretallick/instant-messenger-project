@@ -4,19 +4,21 @@ An messageboard style app where Users can create their own chat boards and then 
 
 Original outline at bottom of README documentation
 
-# API credentials
-Hidden, please use this article for info about access
+### View my app on [Heroku](https://shrouded-savannah-59349.herokuapp.com/).
+This works better when the user signs up two different accounts on two different computers so they can see chat interaction
+
+![Screenshot 2021-02-17 at 17 45 12 (2)](https://user-images.githubusercontent.com/71830424/108245255-f6abc100-7147-11eb-8924-4157ce0f546e.png)
 
 https://medium.com/@jonathanmines/hiding-your-secrets-in-rails-5-using-credentials-e37174eede99
 
 # To Run
-• Clone Repo to your local machine
-• From Command Line enter directory and then run :
+- Clone Repo to your local machine
+- From Command Line enter directory and then run :
 - bundle install
 - yarn
 - rails db:migrate
 - rails s (this will start the server)
-• Then open localhost:3000 on your browser
+- Then open localhost:3000 on your browser
 
 # Testing
 I built this app using Ruby-on-Rails.  Testing has been conducted with RSpec and Capybara, measured with SimpleCov, with an achieved coverage of -
