@@ -8,6 +8,7 @@ gem 'rails', '~> 6.1.2', '>= 6.1.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'carrierwave'
 gem 'rexml'
+gem 'pg'
 gem 'dotenv-rails'
 gem 'mini_magick'
 gem 'devise'
@@ -44,10 +45,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
 
 group :development do

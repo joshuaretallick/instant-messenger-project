@@ -392,3 +392,7 @@ D, [2021-02-17T16:03:16.650273 #80653] DEBUG -- Pubnub::Telementry: Initialized 
 D, [2021-02-17T16:03:16.650389 #80653] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
 D, [2021-02-17T16:28:37.477309 #82364] DEBUG -- Pubnub::Telementry: Initialized Telemetry
 D, [2021-02-17T16:28:37.477467 #82364] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
+D, [2021-02-17T16:37:41.939414 #82856] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2021-02-17T16:37:41.953118 #82856] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0
+D, [2021-02-17T16:42:05.125432 #84056] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2021-02-17T16:42:05.125720 #84056] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.5.0

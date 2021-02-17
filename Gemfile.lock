@@ -240,7 +240,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
     thor (1.1.0)
     timers (4.3.3)
@@ -294,7 +293,6 @@ DEPENDENCIES
   rexml
   selenium-webdriver
   spring
-  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
