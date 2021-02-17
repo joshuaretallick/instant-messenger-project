@@ -15,7 +15,7 @@ class MessagesTest < ApplicationSystemTestCase
     click_on "New Message"
 
     fill_in "Body", with: @message.body
-    fill_in "Idea", with: @message.idea_id
+    fill_in "Channel", with: @message.channel_id
     fill_in "User name", with: @message.user_name
     click_on "Create Message"
 
@@ -28,7 +28,7 @@ class MessagesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Body", with: @message.body
-    fill_in "Idea", with: @message.idea_id
+    fill_in "Channel", with: @message.channel_id
     fill_in "User name", with: @message.user_name
     click_on "Update Message"
 

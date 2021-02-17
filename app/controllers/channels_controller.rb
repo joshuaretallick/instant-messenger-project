@@ -8,6 +8,8 @@ class ChannelsController < ApplicationController
 
   # GET /channels/1 or /channels/1.json
   def show
+    @messages = @channel.messages.all
+    @message = @channel.messages.build
   end
 
   # GET /channels/new

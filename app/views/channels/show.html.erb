@@ -3,6 +3,16 @@
 <div class="row">
   <div class="col-md-9">
     <%= image_tag(@channel.picture_url, width: '25%') if @channel.picture.present? %>
+    <h3>Comments</h3>
+      <% @messages.each do |message| %>
+        <div>
+          <strong><%= message.user_name %></strong>
+          <br>
+          <p><%= message.body %></p>
+          <p><%= link_to 'Delete', message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      <% end %>
+      <%= render partial: 'messages/form', locals: { message: @message } %>
   </div>
 
   <div class="col-md-3">

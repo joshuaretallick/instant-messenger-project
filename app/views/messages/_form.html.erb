@@ -21,10 +21,7 @@
     <%= form.text_area :body %>
   </div>
 
-  <div class="field">
-    <%= form.label :idea_id %>
-    <%= form.number_field :idea_id %>
-  </div>
+  <%= form.hidden_field :channel_id %>
 
   <div class="actions">
     <%= form.submit %>
