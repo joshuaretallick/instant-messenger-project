@@ -1,22 +1,25 @@
 # Instant Messenger style app, tech test for Build Circle
 
-An messageboard style app where Users can create their own chat boards and then people can comment live via PubNub (aka no page refresh required)
+A message board app that allows people to create their own chat boards and comment in real-time. 
 
-Original outline at bottom of README documentation
+This application uses the [PubNub Ruby SDK](https://www.pubnub.com/) to power the underlying real-time messaging functionality.
 
-### View my app on [Heroku](https://shrouded-savannah-59349.herokuapp.com/).
-This works better when the user signs up two different accounts on two different computers so they can see chat interaction
+A working version of the application can be viewed on [Heroku](https://shrouded-savannah-59349.herokuapp.com/).
+
+*Note* that this application is a work in progress. Currently the application works better when the user signs up two different accounts on two different computers so they can see chat interaction
 
 ![Screenshot 2021-02-17 at 17 45 12 (2)](https://user-images.githubusercontent.com/71830424/108245255-f6abc100-7147-11eb-8924-4157ce0f546e.png)
 
 # To Run
 - Clone Repo to your local machine
-- From Command Line enter directory and then run :
-- bundle install
-- yarn
-- rails db:migrate
-- rails s (this will start the server)
-- Then open localhost:3000 on your browser
+- From Command Line enter directory and then run:
+```sh
+bundle install
+yarn
+bundle exec rails db:migrate
+bundle exec rails server
+```
+- Then open `http://localhost:3000` in your browser
 
 # Testing
 I built this app using Ruby-on-Rails.  Testing has been conducted with RSpec and Capybara, measured with SimpleCov, with an achieved coverage of -
