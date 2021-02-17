@@ -2,18 +2,18 @@
 
 
 <p>
-  <strong>Title:</strong>
-  <%= @channel.name %>
+  <h2><%= @channel.name %></h2>
+  <%= image_tag(@channel.picture_url, width: '25%') if @channel.picture.present? %>
 </p>
 
 <%= render partial: 'comments/form', locals: { comment: @comment } %>
 
-<h2> Latest Comments </h2>
+<h4> Latest Comments </h3>
 <%# All the new (async) messages will appear here via the script below. When you refresh they will then appear in the Old Comments section  %>
 <div id="comments"></div>
 
 
-<h2>Old Comments</h2>
+<h4>Old Comments</h3>
 <% @comments.each do |comment| %>
   <p><%= comment.body %></p>
 <% end %>
