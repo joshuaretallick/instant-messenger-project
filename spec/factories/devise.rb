@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :user do
-    id {1}
-    email {"test@user.com"}
-    name {"Hans Gruber"}
-    password {"qwerty"}
-    password_confirmation {"qwerty"}
+    id { 1 }
+    email { 'test@user.com' }
+    name { 'Hans Gruber' }
+    password { 'qwerty' }
+    password_confirmation { 'qwerty' }
     # Add additional fields as required via your User model
   end
 

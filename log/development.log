@@ -9692,3 +9692,204 @@ Processing by ChannelsController#show as HTML
 Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 1.8ms | Allocations: 7175)
 
 
+Started GET "/" for ::1 at 2021-02-18 11:36:26 +0000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-18 11:36:26 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 111.3ms | Allocations: 5136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 223.6ms | Allocations: 18528)
+Completed 200 OK in 296ms (Views: 84.4ms | ActiveRecord: 163.9ms | Allocations: 25340)
+
+
+Started GET "/channels" for ::1 at 2021-02-18 11:36:26 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5707)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.7ms | Allocations: 6191)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-18 11:36:28 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 0.7ms | Allocations: 4677)
+
+
+Started GET "/" for ::1 at 2021-02-18 11:36:28 +0000
+Started GET "/channels" for ::1 at 2021-02-18 11:36:28 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4926)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 5401)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-18 11:36:31 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 645)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 3398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 7251)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 9561)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-18 11:36:43 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joshua@joshua.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (42.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "joshua@joshua.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 276ms (ActiveRecord: 42.1ms | Allocations: 4969)
+
+
+Started GET "/" for ::1 at 2021-02-18 11:36:43 +0000
+Started GET "/channels" for ::1 at 2021-02-18 11:36:43 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5721)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 2.0ms | Allocations: 6201)
+
+
+Started GET "/channels" for ::1 at 2021-02-18 11:36:50 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5696)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.7ms | Allocations: 6169)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-18 11:36:55 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:66:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 3.0ms | Allocations: 1009)
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = $1[0m  [["channel_id", 1]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (71.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 6958)
+Completed 200 OK in 136ms (Views: 14.0ms | ActiveRecord: 75.7ms | Allocations: 18817)
+
+
+Started POST "/comments" for ::1 at 2021-02-18 11:37:05 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>"Hello doggie!", "channel_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+  [1m[36mComment Create (111.5ms)[0m  [1m[32mINSERT INTO "comments" ("channel_id", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["channel_id", 1], ["body", "Hello doggie!"], ["created_at", "2021-02-18 11:37:05.104103"], ["updated_at", "2021-02-18 11:37:05.104103"]]
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+Redirected to http://localhost:3000/channels/1
+Completed 302 Found in 149ms (ActiveRecord: 114.8ms | Allocations: 4401)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-18 11:37:05 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:66:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.8ms | Allocations: 403)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = $1[0m  [["channel_id", 1]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5935)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.9ms | Allocations: 7363)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-18 11:37:08 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:66:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.7ms | Allocations: 403)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = $1[0m  [["channel_id", 1]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 6031)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 2.5ms | Allocations: 8018)
+
+
+Started POST "/comments" for ::1 at 2021-02-18 11:37:14 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>"Yes dog", "channel_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("channel_id", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["channel_id", 1], ["body", "Yes dog"], ["created_at", "2021-02-18 11:37:14.743667"], ["updated_at", "2021-02-18 11:37:14.743667"]]
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:26:in `create'
+Redirected to http://localhost:3000/channels/1
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms | Allocations: 3823)
+
+
+Started GET "/channels/1" for ::1 at 2021-02-18 11:37:14 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:66:in `set_channel'
+  Rendering layout layouts/application.html.erb
+  Rendering channels/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 0.6ms | Allocations: 403)
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."channel_id" = $1[0m  [["channel_id", 1]]
+  ↳ app/views/channels/show.html.erb:17
+  Rendered channels/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1415)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5934)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 2.0ms | Allocations: 7356)
+
+
