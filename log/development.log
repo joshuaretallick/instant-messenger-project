@@ -9452,3 +9452,76 @@ Processing by ChannelsController#index as HTML
 Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 1.0ms | Allocations: 5304)
 
 
+Started GET "/" for ::1 at 2021-02-18 10:55:57 +0000
+Started GET "/channels" for ::1 at 2021-02-18 10:55:57 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (2.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 154.2ms | Allocations: 4341)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 186.9ms | Allocations: 8022)
+Completed 200 OK in 191ms (Views: 190.4ms | ActiveRecord: 32.6ms | Allocations: 8491)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-18 10:56:11 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 8.7ms | Allocations: 219)
+  Rendered users/shared/_links.html.erb (Duration: 3.1ms | Allocations: 537)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 71.8ms | Allocations: 3522)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 7257)
+Completed 200 OK in 123ms (Views: 119.3ms | ActiveRecord: 0.0ms | Allocations: 9022)
+
+
+Started POST "/users" for ::1 at 2021-02-18 10:57:36 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 3.4ms | Allocations: 941)
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 6789)
+Completed 200 OK in 56ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 13154)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-18 10:57:45 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.6ms | Allocations: 229)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 69.9ms | Allocations: 1733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.2ms | Allocations: 5615)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.0ms | Allocations: 7486)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-18 10:57:52 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joshua@joshua.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (124.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "joshua@joshua.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 397ms (ActiveRecord: 125.3ms | Allocations: 4171)
+
+
+Started GET "/" for ::1 at 2021-02-18 10:57:52 +0000
+Started GET "/channels" for ::1 at 2021-02-18 10:57:52 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 86.7ms | Allocations: 5623)
+Completed 200 OK in 88ms (Views: 85.1ms | ActiveRecord: 2.0ms | Allocations: 6105)
+
+
