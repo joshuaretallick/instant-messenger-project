@@ -9431,3 +9431,24 @@ Processing by ChannelsController#show as HTML
 Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 2.4ms | Allocations: 7405)
 
 
+Started DELETE "/users/sign_out" for ::1 at 2021-02-18 10:36:46 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (43.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 239ms (ActiveRecord: 105.8ms | Allocations: 6104)
+
+
+Started GET "/" for ::1 at 2021-02-18 10:36:46 +0000
+Started GET "/channels" for ::1 at 2021-02-18 10:36:46 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 4829)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 1.0ms | Allocations: 5304)
+
+

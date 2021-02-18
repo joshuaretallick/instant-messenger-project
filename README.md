@@ -1,6 +1,6 @@
 # Instant Messenger style app, tech test for Build Circle
 
-A message board app that allows people to create their own chat boards and comment in real-time. 
+A message board app that allows people to create their own chat boards and comment in real-time.
 
 This application uses the [PubNub Ruby SDK](https://www.pubnub.com/) to power the underlying real-time messaging functionality.
 
@@ -22,7 +22,10 @@ bundle exec rails server
 - Then open `http://localhost:3000` in your browser
 
 # Testing
-I built this app using Ruby-on-Rails.  Testing has been conducted with RSpec and Capybara, measured with SimpleCov, with an achieved coverage of -
+I built this app using Ruby-on-Rails. Testing has been conducted with RSpec, FactoryBot and Capybara, measured with SimpleCov, with an achieved coverage of -
+
+# CI/CD
+Through-out the entire build I have been pushing the code to Travis to check for any deployment issues, with a green tick status currently in effect on Github
 
 ## User Stories
 
