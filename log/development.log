@@ -9252,3 +9252,33 @@ Processing by ChannelsController#index as HTML
 Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.3ms | Allocations: 6084)
 
 
+Started GET "/" for ::1 at 2021-02-18 09:55:50 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/channels" for ::1 at 2021-02-18 09:55:50 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 5029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 91.5ms | Allocations: 18422)
+Completed 200 OK in 162ms (Views: 83.7ms | ActiveRecord: 12.2ms | Allocations: 25121)
+
+
+Started GET "/channels" for ::1 at 2021-02-18 09:55:51 +0000
+Processing by ChannelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/views/channels/index.html.erb:5
+  Rendered channels/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (48.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+  Rendered layout layouts/application.html.erb (Duration: 76.4ms | Allocations: 6253)
+Completed 200 OK in 77ms (Views: 27.3ms | ActiveRecord: 49.5ms | Allocations: 6737)
+
+
