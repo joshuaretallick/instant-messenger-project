@@ -75,7 +75,7 @@ how to start the app. Any additional designs or documentation are also welcome. 
 
 ## Messaging Backend & PubNub
 
-We do not expect you to build or deliver backend services for the instant messaging app. For this we will use a service called PubNub which offers comprehensive SDKs and services for creating this type of app. If you are unfamiliar with the publish & subscribe pattern used by PubNub please take some time to research it before starting the project. You will need to create a free account here, and can find the PubNub documentation here. If you have trouble creating a free account, please contact chris.sewell@buildcircle.co.uk for assistance.
+We do not expect you to build or deliver backend services for the instant messaging app. For this we will use a service called PubNub which offers comprehensive SDKs and services for creating this type of app. If you are unfamiliar with the publish & subscribe pattern used by PubNub please take some time to research it before starting the project. You will need to create a free account here, and can find the PubNub documentation here. If you have trouble creating a free account, please contact *** for assistance.
 
 ## Messaging Frontend
 
